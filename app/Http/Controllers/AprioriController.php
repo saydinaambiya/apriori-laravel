@@ -86,7 +86,7 @@ class AprioriController extends Controller
         $rows = Excel::toArray(new AprioriImport,$request->file);
         $data_item = $rows[0];
 
-        $minSupport = 4;
+        $minSupport = 3;
         $arr = [];
         for ($i = 0; $i < count($data_item); $i++) {
             $ar = [];
